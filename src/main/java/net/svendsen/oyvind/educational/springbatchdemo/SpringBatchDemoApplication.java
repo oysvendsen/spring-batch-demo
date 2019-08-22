@@ -11,7 +11,9 @@ public class SpringBatchDemoApplication {
     public static void main(String[] args) {
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
+
         ConfigurableApplicationContext context = SpringApplication.run(SpringBatchDemoApplication.class, args);
+
         stopWatch.stop();
         System.out.println(stopWatch);
     }
