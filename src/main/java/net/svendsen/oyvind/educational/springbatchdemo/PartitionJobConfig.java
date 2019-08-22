@@ -24,7 +24,7 @@ public class PartitionJobConfig {
     @Autowired
     private StepBuilderFactory stepBuilderFactory;
 
-    //    @Bean
+    @Bean
     public Job ParitionJob(Step partitionStep) {
         return jobBuilderFactory.get("partitionJob")
                 .start(partitionStep)

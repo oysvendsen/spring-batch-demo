@@ -21,7 +21,7 @@ public class MultiThreadStepJobConfig {
     @Autowired
     private StepBuilderFactory stepBuilderFactory;
 
-//    @Bean
+    @Bean
     public Job multiThreadJob(Step multiThreadChunkStep) {
         return jobBuilderFactory.get("parallelFlow")
                 .start(multiThreadChunkStep)

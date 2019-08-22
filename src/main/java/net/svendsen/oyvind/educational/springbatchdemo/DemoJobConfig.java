@@ -32,7 +32,7 @@ public class DemoJobConfig {
         this.stepBuilderFactory = stepBuilderFactory;
     }
 
-    //    @Bean
+    @Bean
     public Job demoJob(Step demoTaskletStep, Step demoChunkStep, Step cleanupStep, JobExecutionDecider doRepeatDecider) {
         return jobBuilderFactory.get("demoJob")
                 .incrementer(new RunIdIncrementer())

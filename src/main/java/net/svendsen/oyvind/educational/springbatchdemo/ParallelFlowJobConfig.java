@@ -26,7 +26,7 @@ public class ParallelFlowJobConfig {
     @Autowired
     private StepBuilderFactory stepBuilderFactory;
 
-//    @Bean
+    @Bean
     public Job parallelFlow(Flow splitFlow) {
         return jobBuilderFactory.get("parallelFlow")
                 .start(splitFlow)
