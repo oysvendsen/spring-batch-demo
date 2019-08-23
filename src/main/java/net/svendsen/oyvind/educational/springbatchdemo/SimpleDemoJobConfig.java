@@ -39,6 +39,12 @@ public class SimpleDemoJobConfig {
         return jobBuilderFactory.get("simpleDemoJob")
                 .start(step1)
                 .next(step2)
+                    .on("FAILED")
+                    .to(step1)
+                .from(step2)
+                    .on("REPEAT")
+                    .to(step2)
+                    .end()
                 .build();
     }
 
